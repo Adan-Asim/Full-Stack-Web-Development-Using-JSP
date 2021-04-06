@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>searchForm</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			body
+			{
+				border: 2px solid white;
+				width: 30%;
+				height: 45%;
+				margin-top: 14%;
+				margin-left: 35%;	
+				background-image:url('bg.jpg');
+     				background-size:cover;
+				color: white;
+			}
+		</style>
+		<script>
+			function Check()
+			{
+				if(document.getElementById('iname').value == "")
+				{
+					alert("Please enter Item Name to search");
+					return false;
+				}
+			 	return true;
+			}
+		</script>
+	</head>
+	<body>
+		<h1 style = "text-align:center; margin-top: 6%; margin-left:1%"> Item Searching Form</h1>
+		<hr>
+		<form action = "process.jsp">
+			<ul >
+				<h2 style = "text-align:center margin-top:-0%; margin-left: 7%">Search an item from record</h2> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				Item Name: <input type = "text" placeholder= "Enter Item name to Search" name = "iname" id = "iname">
+			</ul>
+			<input type = "submit" value = "Search" style = "margin-left:45%; margin-top:3%" onclick = "return Check()"> 
+			<a href = "show.jsp" style = "text-decoration:none;color:black"><button style = "margin-left:29%; margin-top:5%; color:black">Show previously searched Item</a></button>
+		</form>
+	</body>
+</html>
